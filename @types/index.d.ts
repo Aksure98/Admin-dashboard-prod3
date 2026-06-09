@@ -2376,3 +2376,23 @@ interface HeatMapAreasParams extends HeatMapParams {
 }
 
 export type ServiceType = "RIDES" | "TRUCK" | "DELIVERY" | "TOWING";
+
+
+
+
+// Notification Templates
+
+interface NotificationInbox {
+  id: string;
+  title: string;
+  message: string;
+  created_at: string;
+  is_read: boolean;
+}
+
+type NotificationInboxResponse = ApiResponse<NotificationInbox[]>;
+
+interface NotificationInboxPayload {
+  page?: number;
+  pageSize?: number;
+}
